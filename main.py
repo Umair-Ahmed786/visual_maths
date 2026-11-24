@@ -1,3 +1,4 @@
+import os
 import cv2
 import cvzone
 import numpy as np
@@ -29,7 +30,7 @@ with col2:
 
 # Streamlit Ended <=====
 model = genai.GenerativeModel('gemini-1.5-flash')
-genai.configure(api_key="AIzaSyD-edDjXingTU2SjjgrwPHnEEPVO96_e5U")
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 
 
